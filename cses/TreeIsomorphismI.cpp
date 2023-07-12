@@ -5,7 +5,6 @@
 using namespace std;
 
 typedef unsigned long long ull;
-typedef pair<ull, ull> pll;
 
 const int N = 60, M = 998244353;
 const ull mask = std::chrono::steady_clock::now().time_since_epoch().count();
