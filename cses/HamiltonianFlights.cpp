@@ -1,5 +1,5 @@
-#pragma GCC optimize("Ofast,inline,unroll-loops")
-#pragma GCC target("bmi,bmi2,lzcnt,popcnt,avx2")
+//#pragma GCC optimize("Ofast,inline,unroll-loops")
+//#pragma GCC target("bmi,bmi2,lzcnt,popcnt,avx2")
 
 #include <iostream>
 #include <vector>
@@ -21,7 +21,6 @@ int main()
         mp[u].push_back(v);
     }
     // define: dp[i][j] = 目前在 i, 已走了 j 集合內元素 
-    // 轉移式: 若有邊 i -> k, dp[k][j | (1 << k)] += dp[i][j]
     dp[0][1] = 1;
     for(int j = 0; j < (1 << n); ++j)
     {

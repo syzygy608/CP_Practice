@@ -38,33 +38,25 @@ void build(int idx, int l, int r)
 Node query(int idx, int l, int r, int q)
 {
     if(l == r)
-        return segment[idx];
+    {
+        Node tmp = segment[idx];
+        segment[idx].space -= q;
+        return tmp;
+    }
     Node temp(0, 0);
     int mid = (l + r) >> 1;
     if(segment[idx << 1].space >= q)
         temp = merge(temp, query(idx << 1, l, mid, q));
     else
         temp = merge(temp, query(idx << 1 | 1, mid + 1, r, q));
-    return temp;
-}
-
-void update(int idx, int l, int r, int pos, int val)
-{
-    if(l == r)
-    {
-        segment[idx].space = val;
-        return;
-    }
-    int mid = (l + r) >> 1;
-    if(pos <= mid)
-        update(idx << 1, l, mid, pos, val);
-    else
-        update(idx << 1 | 1, mid + 1, r, pos, val);
     segment[idx] = merge(segment[idx << 1], segment[idx << 1 | 1]);
+    return temp;
 }
 
 int main()
 {
+    cin.tie(0);
+    ios_base::sync_with_stdio(0);
     cin >> n >> m;
     for(int i = 1; i <= n; ++i)
         cin >> arr[i];
@@ -78,7 +70,6 @@ int main()
         {
             Node q = query(1, 1, n, num);
             cout << q.idx << ' ';
-            update(1, 1, n, q.idx, q.space - num);
         }
     }
     return 0;

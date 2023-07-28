@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 
+#pragma GCC optimize("Ofast,inline,unroll-loops")
+#pragma GCC target("bmi,bmi2,lzcnt,popcnt,avx2")
 using namespace std;
 typedef long long ll;
 const int maxn = 2e5 + 5;
@@ -109,6 +111,7 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
+    cout.tie(0);
     int n, q;
     cin >> n >> q;
     for(int i = 1; i <= n; i++)
