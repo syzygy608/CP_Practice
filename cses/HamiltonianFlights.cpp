@@ -6,35 +6,37 @@
 
 using namespace std;
 const int mod = 1e9 + 7;
-int dp[21][(1 << 21)];
-vector<int> mp[21];
+int n, m, dp[20][1 << 20];
+vector<int> g[20];
 
 int main()
 {
     (cin.tie(0))->sync_with_stdio(0);
     int n, m;
     cin >> n >> m;
-    for(int i = 0, u, v; i < m; ++i)
+    for(int i = 1, u, v; i <= m; ++i)
     {
         cin >> u >> v;
         u--, v--;
-        mp[u].push_back(v);
+        g[u].emplace_back(v);
     }
-    // define: dp[i][j] = 目前在 i, 已走了 j 集合內元素 
-    dp[0][1] = 1;
-    for(int j = 0; j < (1 << n); ++j)
+    dp[0][1] = 1; // 初始狀態
+    for(int i = 0; i < (1 << n); ++i)
     {
-        for(int i = 0; i < n; ++i)
+        for(int u = 0; u < n; ++u)
         {
-            for(int k: mp[i])
+            if(!dp[u][i])
+                continue;
+            if(i & (1 << u))
             {
-                if(!dp[i][j] || (j & (1 << k)))
-                    continue; // node i in set or already calculate
-                dp[k][j | (1 << k)] += dp[i][j];
-                dp[k][j | (1 << k)] %= mod;
+                for(auto v: g[u])
+                {
+                    dp[v][i ^ (1 << v)] += dp[u][i];
+                    dp[v][i ^ (1 << v)] %= mod;
+                }
             }
         }
     }
-    cout << dp[n - 1][(1 << n) - 1];
+    cout << dp[n - 1][(1 << n) - 1] << '\n';
     return 0;
 }
