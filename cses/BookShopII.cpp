@@ -10,7 +10,7 @@ int main()
 {
     int n, x;
     cin >> n >> x;
-    vector<int> price(n + 1), pages(n + 1), copy(n + 1), p, v, c;
+    vector<int> price(n + 1), pages(n + 1), copy(n + 1), p, v;
     for(int i = 1; i <= n; ++i)
         cin >> price[i];
     for(int i = 1; i <= n; ++i)
@@ -24,7 +24,6 @@ int main()
         {
             p.push_back(price[i] * base);
             v.push_back(pages[i] * base);
-            c.push_back(base);
             copy[i] -= base;
             base <<= 1;
         }
@@ -32,7 +31,6 @@ int main()
         {
             p.push_back(price[i] * copy[i]);
             v.push_back(pages[i] * copy[i]);
-            c.push_back(copy[i]);
         }
     }
 
