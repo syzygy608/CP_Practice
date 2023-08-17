@@ -1,14 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <bitset>
 #include <queue>
-#include <cstring>
 
 using namespace std;
-typedef long long ll;
-const int N = 5e2 + 5;
-const int INF = 1 << 30;
-
-vector<int> ans;
+const int N = 205;
+const int INF = 1e9;
 
 struct Dinic
 {
@@ -88,48 +85,35 @@ struct Dinic
         adj[u].push_back(edge{v, cap, 0, (int)adj[v].size()});
         adj[v].push_back(edge{u, 0, 0, (int)adj[u].size()-1});
     }
-    void dfs2(int u)
-    {
-        ans.push_back(u);
-        for(int &i = cur[u]; i<(int)adj[u].size();++i)
-        {
-            edge &e = adj[u][i];
-            if(e.flow > 0)
-            {
-                i++; 
-                dfs2(e.to);
-                break;
-            }
-        }
-    }
 };
 
 int main()
 {
-    int n, m;
-    cin >> n >> m;
-    Dinic sol;
-    sol.init(n);
-    for(int i = 0, u, v; i < m; ++i)
+    int n;
+    cin >> n;
+    Dinic dinic;
+    dinic.init(2 * n + 3);
+    for(int i = 1; i <= n; ++i)
     {
-        cin >> u >> v;
-        u--, v--;
-        sol.add_edge(u, v, 1);
-    }
-    int tmp = sol.maxflow(0, n - 1);
-    cout << tmp << '\n';
-    memset(sol.cur, 0, sizeof(sol.cur));
-    for(auto i: sol.adj[0])
-    {
-        if(i.flow > 0)
+        for(int j = 1; j <= n; ++j)
         {
-            ans.push_back(0);
-            sol.dfs2(i.to);
-            cout << ans.size() << '\n';
-            for(auto j: ans)
-                cout << j + 1 << ' ';
-            cout << '\n';
-            ans.clear();
+            char c;
+            cin >> c;
+            if(c == 'o')
+                dinic.add_edge(i, j + n, 1);
         }
-    }   
+    }
+    for(int i = 1; i <= n; ++i)
+    {
+        dinic.add_edge(0, i, 1);
+        dinic.add_edge(i + n, 2 * n + 1, 1);
+    }
+    cout << dinic.maxflow(0, 2 * n + 1) << '\n';
+    dinic.bfs();
+    for(int i = 1; i <= n; ++i)
+        if(dinic.dis[i] == -1)
+            cout << 1 << ' ' << i << '\n';
+    for(int i = 1; i <= n; ++i)
+        if(dinic.dis[i + n] != -1)
+            cout << 2 << ' ' << i << '\n';
 }
