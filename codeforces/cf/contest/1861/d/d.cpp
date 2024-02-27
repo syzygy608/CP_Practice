@@ -48,14 +48,13 @@ const int maxn = 2e5 + 5;
 
 void sol()
 {
-
 }
 
 signed main()
 {
     AnNinMiRu
     int t = 1;
-    // cin >> t;
+    cin >> t;
     while(t--)
         sol();
     return 0;
