@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"abra\ncadabra\nabcd\nd\nIMPOSSIBLE"
+		],
+		"test": "abracadabra\n5\nabra\ncadabra\nabcd\ndcba\nmagic\n"
+	}
+]

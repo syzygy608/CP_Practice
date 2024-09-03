@@ -1,0 +1,37 @@
+[
+	{
+		"correct_answers":
+		[
+			"aufreissen\naufreiBen"
+		],
+		"test": "AUFREISSEN\n"
+	},
+	{
+		"correct_answers":
+		[
+			"massstab\nmaBstab\nmasBtab"
+		],
+		"test": "MASSSTAB\n"
+	},
+	{
+		"correct_answers":
+		[
+			"eindeutig"
+		],
+		"test": "EINDEUTIG\n"
+	},
+	{
+		"correct_answers":
+		[
+			"s"
+		],
+		"test": "S\n"
+	},
+	{
+		"correct_answers":
+		[
+			"strasse\nstraBe"
+		],
+		"test": "STRASSE\n"
+	}
+]

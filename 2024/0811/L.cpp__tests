@@ -1,0 +1,30 @@
+[
+	{
+		"correct_answers":
+		[
+			"4\nDDRR"
+		],
+		"test": "3 3\nS..\n...\n..E\n"
+	},
+	{
+		"correct_answers":
+		[
+			"2\nRD"
+		],
+		"test": "3 3\nSX.\nXXX\nXXE\n"
+	},
+	{
+		"correct_answers":
+		[
+			"-1"
+		],
+		"test": "2 2\nSX\nXE\n"
+	},
+	{
+		"correct_answers":
+		[
+			"3\nULD"
+		],
+		"test": "3 3\n.X.\nEXX\nXXS\n"
+	}
+]
