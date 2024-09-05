@@ -64,7 +64,9 @@ void sol()
 	{
 		cerr << v << '\n';
 		int left = n - v;
-		cerr << left << '\n';
+		int right = 
+		ll lhash = h.get(0, left);
+		ll rhash = h.get(left, n);
 	}
 }
 
