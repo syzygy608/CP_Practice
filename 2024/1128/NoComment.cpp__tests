@@ -1,0 +1,8 @@
+[
+	{
+		"test": "2 3\na b c\n3 ad ce fg\n4 de cf ab eg\n"
+	},
+	{
+		"test": "1 1\na\n1 a\n"
+	}
+]

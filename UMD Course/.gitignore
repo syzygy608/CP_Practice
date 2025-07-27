@@ -1,0 +1,7 @@
+.vscode/
+*.out
+*.exe
+*.in
+*.ans
+*.txt
+*.cpp__tests

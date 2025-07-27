@@ -1,0 +1,15 @@
+[
+	{
+		"correct_answers":
+		[
+			"cbc\nyyyx\nalphaaet\nk\neabbccddee\ntttddq"
+		],
+		"test": "6\n3\nabc\n4\nxyyx\n8\nalphabet\n1\nk\n10\naabbccddee\n6\nttbddq\n"
+	},
+	{
+		"test": "1\n4\naaaa\n"
+	},
+	{
+		"test": "1\n4\nqqbb\n"
+	}
+]

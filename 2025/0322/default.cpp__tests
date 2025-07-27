@@ -1,0 +1,62 @@
+[
+	{
+		"correct_answers":
+		[
+			"NO\nYES\nNO\nYES\nYES\nNO\nYES\nNO"
+		],
+		"test": "8\n1 10000\na\n3 3\nrev\n6 0\nstring\n6 0\ntheory\n9 2\nuniversal\n19 0\ncodeforcesecrofedoc\n19 1\ncodeforcesecrofedoc\n3 1\nzzz\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n19 1\ncodeforcesecrofedoc\n",
+		"uncorrect_answers":
+		[
+			"ccdeforoesecrofedoc codeforceseorofedcc\nYES"
+		]
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n5 0\naacaa\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n5 1\naacaa\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n5 1\naaaca\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n1 0\na\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n2 1\nab\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n2 1\nba\n"
+	}
+]

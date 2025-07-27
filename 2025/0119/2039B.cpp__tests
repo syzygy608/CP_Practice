@@ -1,0 +1,18 @@
+[
+	{
+		"correct_answers":
+		[
+			"abaa\n-1\nyouknowwho\neforce\nbang"
+		],
+		"test": "5\ndcabaac\na\nyouknowwho\ncodeforces\nbangladesh\n"
+	},
+	{
+		"test": "1\nabb\n"
+	},
+	{
+		"test": "1\nab\n"
+	},
+	{
+		"test": "1\nbab\n"
+	}
+]

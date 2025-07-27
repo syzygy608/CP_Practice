@@ -1,0 +1,16 @@
+[
+	{
+		"correct_answers":
+		[
+			"5 vwxyz"
+		],
+		"test": "abcwkodvwxyzwia\n"
+	},
+	{
+		"correct_answers":
+		[
+			"3 abc"
+		],
+		"test": "abc\n"
+	}
+]

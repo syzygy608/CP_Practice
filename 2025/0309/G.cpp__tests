@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"idp\n\nist"
+		],
+		"test": "3\nidpc\nmcc\nmist\n"
+	}
+]

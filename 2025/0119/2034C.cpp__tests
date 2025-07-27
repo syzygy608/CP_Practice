@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"0\n6\n5"
+		],
+		"test": "3\n3 3\nUUU\nL?R\nDDD\n2 3\n???\n???\n3 3\n?U?\nR?L\nRDL\n"
+	}
+]
